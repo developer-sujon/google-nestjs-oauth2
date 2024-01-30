@@ -12,7 +12,7 @@ function App() {
       <GoogleOAuthProvider clientId="49027018973-tj2c5q844k67gnr2msoir1548qrkqsaf.apps.googleusercontent.com">
         <GoogleLogin
           onSuccess={async (credentialResponse) => {
-            const response = await axios.post("http://localhost:5050/login", {
+            const response = await axios.post("http://localhost:5000/login", {
               token: credentialResponse.credential,
             });
             const data = response.data;
